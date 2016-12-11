@@ -22,14 +22,14 @@ gulp.task('scripts', function() {
     dirname: "min",
     suffix: ".min",
   }))
-  .pipe(gulp.dest('js'))
+  .pipe(gulp.dest('src/assets/js'))
 });
 
 gulp.task('sass', function() {
   gulp.src('src/assets/sass/**/*.scss')
   .pipe(sass({outputStyle: 'compressed'}))
   .pipe(plumber())
-  .pipe(gulp.dest('css'));
+  .pipe(gulp.dest('src/assets/css'));
 });
 
 gulp.task('images', function () {
@@ -39,7 +39,7 @@ gulp.task('images', function () {
     svgoPlugins: [{removeViewBox: false}],
     use: [pngquant()]
   }))
-  .pipe(gulp.dest('images'));
+  .pipe(gulp.dest('src/assets/images'));
 });
 
 gulp.task('default', ['browser-sync', 'sass', 'scripts'], function() {
