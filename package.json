@@ -1,0 +1,38 @@
+{
+  "name": "front-starter",
+  "version": "1.0.0",
+  "description": "A simple starter to initialize you front project using gulp.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/viniciusllima/front-starter.git"
+  },
+  "keywords": [
+    "gulp",
+    "front",
+    "front-starter"
+  ],
+  "author": "Vinicius Lima",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/viniciusllima/front-starter/issues"
+  },
+  "homepage": "https://github.com/viniciusllima/front-starter#readme",
+  "dependencies": {
+    "browser-sync": "^2.18.2",
+    "gulp": "^3.9.1"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-imagemin": "^3.1.1",
+    "gulp-plumber": "^1.1.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2",
+    "gulp-uglify": "^2.0.0",
+    "imagemin-pngquant": "^5.0.0",
+    "require": "^2.4.20"
+  }
+}
