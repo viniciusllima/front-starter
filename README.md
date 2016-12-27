@@ -1,5 +1,5 @@
 # Front Starter
-A simple starter to initialize you front project using gulp.
+:fire: A simple starter to initialize you front project using gulp.
 
 # Requirements
 ```
