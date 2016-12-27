@@ -4,3 +4,5 @@ node_modules
 css
 src/assets/js/min
 .git
+**/node_modules/
+**/bower_components/
