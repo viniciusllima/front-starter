@@ -1,0 +1,28 @@
+{
+  "name": "front-starter",
+  "description": "A simple starter to initialize you front project using gulp.",
+  "main": "index.js",
+  "authors": [
+    "Vinicius Lima"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "gulp",
+    "front",
+    "front-starter"
+  ],
+  "homepage": "https://github.com/viniciusllima/front-starter",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "bootstrap-sass": "^3.3.7"
+  },
+  "dependencies": {
+    "jquery": "^3.2.1"
+  }
+}
