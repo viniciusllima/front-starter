@@ -11,6 +11,7 @@ var concat          = require('gulp-concat');
 var filter          = require('gulp-filter');
 var merge           = require('merge-stream');
 var notify          = require('gulp-notify');
+var babel           = require('gulp-babel');
 
 gulp.task('browser-sync', function() {
   browserSync.init(['src/assets/css/*.css', 'src/assets/js/**/*.js', 'index.html'], {
@@ -29,6 +30,7 @@ gulp.task('js', function() {
   var jsFiles = ['src/assets/js/*'];
 
   gulp.src(mainBowerFiles().concat(jsFiles))
+  .pipe(babel({presets: ['es2015']}))
   .pipe(concat('app.js'))
   .pipe(uglify())
   .pipe(gulp.dest(config.dest + 'js'))

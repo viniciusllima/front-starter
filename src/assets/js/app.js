@@ -3,7 +3,4 @@
 
   // -- Vanilla JS
 
-  console.log('ksdkljdskladklsaj');
-
-
 }(this));
