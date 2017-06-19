@@ -3,3 +3,4 @@
 .git
 assets/**
 **/node_modules/
+yarn.lock
