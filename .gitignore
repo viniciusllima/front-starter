@@ -3,4 +3,3 @@
 .git
 assets/**
 **/node_modules/
-**/bower_components/

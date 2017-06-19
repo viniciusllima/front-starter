@@ -6,11 +6,8 @@ var plumber         = require('gulp-plumber');
 var rename          = require("gulp-rename");
 var imagemin        = require("gulp-imagemin");
 var pngquant        = require('imagemin-pngquant');
-var mainBowerFiles  = require('main-bower-files');
 var concat          = require('gulp-concat');
-var filter          = require('gulp-filter');
 var merge           = require('merge-stream');
-var notify          = require('gulp-notify');
 var babel           = require('gulp-babel');
 
 gulp.task('browser-sync', function() {
@@ -27,9 +24,9 @@ var config = {
 }
 
 gulp.task('js', function() {
-  var jsFiles = ['src/assets/js/*'];
+  var jsFiles = ['src/assets/js/*', './node_modules/jquery/src/**/*.js', './node_modules/bootstrap-sass/javascripts/**/*.js'];
 
-  gulp.src(mainBowerFiles().concat(jsFiles))
+  gulp.src(jsFiles)
   .pipe(babel({presets: ['es2015']}))
   .pipe(concat('app.js'))
   .pipe(uglify())
