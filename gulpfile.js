@@ -24,7 +24,11 @@ var config = {
 }
 
 gulp.task('js', function() {
-  var jsFiles = ['src/assets/js/*', './node_modules/jquery/src/**/*.js', './node_modules/bootstrap-sass/javascripts/**/*.js'];
+  var jsFiles = [
+    'src/assets/js/*',
+    './node_modules/jquery/dist/jquery.min.js',
+    './node_modules/bootstrap-sass/javascripts/**/*.js'
+  ];
 
   gulp.src(jsFiles)
   .pipe(babel({presets: ['es2015']}))
