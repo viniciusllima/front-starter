@@ -9,6 +9,7 @@ var pngquant        = require('imagemin-pngquant');
 var concat          = require('gulp-concat');
 var merge           = require('merge-stream');
 var babel           = require('gulp-babel');
+var browserify      = require('gulp-browserify');
 
 gulp.task('browser-sync', function() {
   browserSync.init(['src/assets/css/*.css', 'src/assets/js/**/*.js', 'index.html'], {
@@ -25,7 +26,7 @@ var config = {
 
 gulp.task('js', function() {
   var jsFiles = [
-    'src/assets/js/*',
+    'src/assets/js/app.js',
     './node_modules/jquery/dist/jquery.min.js',
     './node_modules/bootstrap-sass/javascripts/**/*.js'
   ];
@@ -33,6 +34,9 @@ gulp.task('js', function() {
   gulp.src(jsFiles)
   .pipe(babel({presets: ['es2015']}))
   .pipe(concat('app.js'))
+  .pipe(browserify({
+    insertGlobals : true
+  }))  
   .pipe(uglify())
   .pipe(gulp.dest(config.dest + 'js'))
 });
