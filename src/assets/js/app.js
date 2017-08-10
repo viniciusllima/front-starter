@@ -1,6 +1,6 @@
-(function (window) {
-  'use strict'
-
+(function () {
   // -- Vanilla JS
 
-}(this));
+  require('./test');
+
+}());
